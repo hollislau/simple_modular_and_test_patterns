@@ -1,9 +1,14 @@
 const chai = require("chai");
 const expect = chai.expect;
-const Greet = (__dirname + "/../lib/greet");
+const Greeter = require(__dirname + "/../lib/greet");
 
-const greet = new Greet();
+const greeter = new Greeter("Maverick");
 
-describe("greet", function () {
-  
+describe("greeter", function () {
+  it("should have a name", function () {
+    expect(greeter.name).to.eql("Maverick");
+  });
+  it("should say hello to somebody", function () {
+    expect(greeter.greet()).to.eql("Hello Maverick!");
+  });
 });
