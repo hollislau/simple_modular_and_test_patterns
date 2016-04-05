@@ -1,6 +1,5 @@
 const Greeter = module.exports = function (name) {
   this.name = name;
-  this.nameCLI = process.argv[2];
 };
 
 Greeter.prototype.greet = function () {
