@@ -8,7 +8,11 @@ describe("greeter", function () {
   it("should have a name", function () {
     expect(greeter.name).to.eql("Maverick");
   });
-  it("should say hello to somebody", function () {
+  it("should return hello to somebody", function () {
     expect(greeter.greet()).to.eql("Hello Maverick!");
+  });
+  it("should capture a name in the command line", function () {
+    greeter.nameCLI = "Goose";
+    expect(greeter.nameCLI).to.eql("Goose");
   });
 });
