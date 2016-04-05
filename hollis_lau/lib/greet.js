@@ -5,3 +5,5 @@ const Greeter = module.exports = function (name) {
 Greeter.prototype.greet = function () {
   return "Hello " + this.name + "!";
 };
+
+console.log("Hello " + process.argv[2] + "!");
