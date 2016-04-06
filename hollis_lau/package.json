@@ -1,18 +1,25 @@
 {
-  "name": "hollis_lau",
-  "version": "1.0.0",
-  "description": "",
+  "name": "greeter_app",
+  "version": "0.1.0",
+  "description": "App that greets people so you don't have to",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "chai": "^3.5.0"
+  "bin": {
+    "greet": "./bin/greet"
   },
-  "devDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "hollislau@hotmail.com",
+  "license": "MIT"
 }
