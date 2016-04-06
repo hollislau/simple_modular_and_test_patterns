@@ -3,9 +3,6 @@ const expect = chai.expect;
 const Greeter = require(__dirname + "/../lib/greet");
 
 const greeter = new Greeter("Maverick");
-const process = {
-  "argv": ["node", "greet.js"]
-};
 
 describe("greeter", function () {
   it("should have a name", function () {
@@ -17,12 +14,13 @@ describe("greeter", function () {
 });
 
 describe("greetCLI", function () {
+  const process = {
+    "argv": ["node", "greet.js", "Goose"]
+  };
   it("should check if a name argument is provided", function () {
-    process.argv.push("name");
-    expect(process.argv.hasOwnProperty(2)).to.eql(true);
+    expect(process.argv).to.have.ownProperty(2);
   });
   it("should capture and use a provided name", function () {
-    process.argv[2] = "Goose";
     expect(process.argv[2]).to.eql("Goose");
   });
 });
