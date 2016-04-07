@@ -1,9 +1,7 @@
-const Greeter = module.exports = function (name) {
-  this.name = name;
-};
-
-Greeter.prototype.greet = function () {
-  return "Hello " + this.name + "!";
+module.exports = exports = {
+  greet: function (name) {
+    return "Hello " + name + "!";
+  }
 };
 
 function greetCLI() {
